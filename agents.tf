@@ -4,7 +4,7 @@ module "agent_group" {
   source = "./modules/agent_group"
 
   k3s_cluster_secret = random_password.k3s_cluster_secret.result
-  k3s_version        = each.k3s_version
+  k3s_version        = each.value.k3s_version
 
   taints = each.value.taints
 
