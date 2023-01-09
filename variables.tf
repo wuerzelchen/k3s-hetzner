@@ -81,6 +81,7 @@ variable "agent_groups" {
       type      = "cx21"
       count     = 2
       ip_offset = 33
+      k3s_version = "v1.26.0+k3s1"
       taints    = []
     }
   }
@@ -88,6 +89,7 @@ variable "agent_groups" {
     type      = string
     count     = number
     ip_offset = number
+    k3s_version = string
     taints    = list(string)
   }))
 }
